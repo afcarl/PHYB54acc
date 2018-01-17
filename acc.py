@@ -17,4 +17,4 @@ def convword(data):
 while(True):
     data = acc_socket.recv(4096)
     acc = map(convword,[data[0:2],data[2:4],data[4:6]])
-    print(time.time()-time0,ord(data[6]),acc[0],acc[1],acc[1])
+    print("%10f %10d %+2.10f %+2.10f %+2.10f"%(time.time()-time0,ord(data[6]),acc[0],acc[1],acc[1]))
